@@ -7,3 +7,8 @@ I use Java, Maven and Jersey ( the doc : https://jersey.github.io/documentation/
 
 ## Execution
 ```mvn exec:java```
+
+## External usefull doc 
+- Overview of the Client API : https://docs.oracle.com/javaee/7/tutorial/jaxrs-client001.htm#BABBIHEJ
+- https://jersey.github.io/documentation/latest/user-guide.html#d0e4368
+
