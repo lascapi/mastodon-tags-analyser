@@ -4,10 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>simple-service</artifactId>
+    <artifactId>mastodon-tags-analyser</artifactId>
     <packaging>jar</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <name>simple-service</name>
+    <version>0.5</version>
+    <name>mastodon-tags-analyser</name>
 
     <dependencyManagement>
         <dependencies>
