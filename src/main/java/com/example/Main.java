@@ -7,7 +7,7 @@ import org.glassfish.jersey.server.ResourceConfig;
 import java.io.IOException;
 import java.net.URI;
 
-import javax.xml.crypto.Data;
+//import javax.xml.crypto.Data;
 
 /**
  * Main class.
@@ -39,7 +39,7 @@ public class Main {
      * @throws IOException
      */
     public static void main(String[] args) throws IOException {
-        System.out.println(data.getData());
+        System.out.println(data.toString());
         final HttpServer server = startServer();
         System.out.println(String.format("Jersey app started with WADL available at "
                 + "%sapplication.wadl\nHit enter to stop it...", BASE_URI));
