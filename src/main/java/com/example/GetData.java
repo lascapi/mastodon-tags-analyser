@@ -6,6 +6,8 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.json.JsonArray;
 import javax.json.JsonObject;
@@ -43,6 +45,33 @@ public class GetData {
             list.add((JsonObject) jsonArray.get(i));
         }
         return list;
+    }
+
+    /**
+     * @return a list of tags
+     */
+    public Map<String,Integer> getTagsCount(){
+        ArrayList<String> tags = new ArrayList<>(); 
+
+        ArrayList<JsonObject> listData = getDataObjects();
+        for (int i = 0; i < listData.size(); i++) {
+
+            JsonArray tagsArrayList = listData.get(i).getJsonArray("tags");
+            for (int j = 0; j < tagsArrayList.size(); j++) {
+                tags.add(tagsArrayList.get(j).asJsonObject().getString("name"));
+            }
+        }
+
+        Map<String,Integer> tagsCount = new HashMap<String,Integer>(); 
+        for (String subtag : tags) {
+            if (tagsCount.get(subtag) != null ){
+                tagsCount.put(subtag, tagsCount.get(subtag) + 1);
+            }else{
+                tagsCount.put(subtag, 1);
+            }
+        }
+
+        return tagsCount;
     }
 
     /**
