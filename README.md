@@ -6,7 +6,10 @@ I use this API : [mastodon4j](https://github.com/sys1yagi/mastodon4j), an exampl
 I use Java, Maven and Jersey ( the doc : https://jersey.github.io/documentation/latest/getting-started.html ) 
 
 ## Execution
-```mvn exec:java```
+Simple way  
+```mvn exec:java```  
+With some arguments  
+```mvn exec:java -Dexec.args="zaclys mastodon"```
 
 ## External usefull doc 
 - Overview of the Client API : https://docs.oracle.com/javaee/7/tutorial/jaxrs-client001.htm#BABBIHEJ
